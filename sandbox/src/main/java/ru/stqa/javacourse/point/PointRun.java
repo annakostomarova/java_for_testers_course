@@ -1,4 +1,6 @@
-package ru.stqa.javacourse.sandbox;
+package ru.stqa.javacourse.point;
+
+import ru.stqa.javacourse.point.Point;
 
 /**
  * Created by kostoa on 4/28/2017.
