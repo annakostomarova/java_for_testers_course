@@ -1,7 +1,5 @@
 package ru.stqa.javacourse.sandbox;
 
-import org.w3c.dom.css.Rect;
-
 public class HelloWorld {
 
 	public static void main(String[] args) {
