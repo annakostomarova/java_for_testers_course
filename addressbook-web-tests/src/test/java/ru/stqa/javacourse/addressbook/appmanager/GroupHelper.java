@@ -39,6 +39,13 @@ public class GroupHelper extends HelperBase {
     if (!wd.findElement(By.name("selected[]")).isSelected()) {
       click(By.name("selected[]"));
     }
+  }
 
+  public void initGroupModification() {
+    click(By.name("edit"));
+  }
+
+  public void submitGroupModification() {
+    click(By.name("update"));
   }
 }
