@@ -1,8 +1,6 @@
 package ru.stqa.javacourse.addressbook.appmanager;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import ru.stqa.javacourse.addressbook.model.ContactData;
 
 import java.util.concurrent.TimeUnit;
 
