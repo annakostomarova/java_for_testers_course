@@ -45,7 +45,7 @@ public class ContactHelper extends HelperBase {
     }
   }
 
-  public void gotoAddNewPage() {
+  public void gotoAddNew() {
     click(By.linkText("add new"));
   }
 
@@ -75,4 +75,13 @@ public class ContactHelper extends HelperBase {
     accept();
   }
 
+  public void createContact(ContactData contact, boolean b) {
+    gotoAddNew();
+    fillAddNewForm(contact, b);
+    submitNewContactCreation();
+  }
+
+  public boolean isThereAContact() {
+    return isElementPresent(By.name("selected[]"));
+  }
 }

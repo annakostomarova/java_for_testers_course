@@ -7,8 +7,7 @@ public class ContactCreationTests extends TestBase {
 
     @Test
     public void testContactCreation() {
-        app.getContactHelper().gotoAddNewPage();
-        app.getContactHelper().fillAddNewForm(new ContactData(
+        app.getContactHelper().createContact(new ContactData(
                 "firstname",
                 "middlename",
                 "lastname",
@@ -29,7 +28,6 @@ public class ContactCreationTests extends TestBase {
                 "notes",
                 "test1"),
                 true);
-        app.getContactHelper().submitNewContactCreation();
         app.getNavigationHelper().gotoHomePage();
     }
 }
