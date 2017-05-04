@@ -102,21 +102,37 @@ public class ContactData {
     return workphone;
   }
 
-  public String getFax() {return  fax; }
+  public String getFax() {
+    return  fax;
+  }
 
-  public String getEmail() {return email; }
+  public String getEmail() {
+    return email;
+  }
 
-  public String getEmail2() {return email2; }
+  public String getEmail2() {
+    return email2;
+  }
 
-  public String getEmail3() {return email3; }
+  public String getEmail3() {
+    return email3;
+  }
 
-  public String getHomepage() {return homepage; }
+  public String getHomepage() {
+    return homepage;
+  }
 
-  public String getAddress2() {return address2; }
+  public String getAddress2() {
+    return address2;
+  }
 
-  public String getPhone2() {return phone2; }
+  public String getPhone2() {
+    return phone2;
+  }
 
-  public String getNotes() {return notes; }
+  public String getNotes() {
+    return notes;
+  }
 
   public String getGroup() {
     return group;

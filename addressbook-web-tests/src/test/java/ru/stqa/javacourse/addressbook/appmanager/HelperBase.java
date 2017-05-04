@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
  * Created by kostoa on 4/29/2017.
  */
 public class HelperBase {
+
   protected WebDriver wd;
 
   public HelperBase(WebDriver wd) {

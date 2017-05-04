@@ -20,7 +20,7 @@ public class ContactHelper extends HelperBase {
   public void fillAddNewForm(ContactData contactData, boolean creation) {
     this.creation = creation;
     type(By.name("firstname"),contactData.getFirstname());
-    type(By.name("middlename"),contactData.getLastname());
+    type(By.name("middlename"),contactData.getMiddlename());
     type(By.name("lastname"),contactData.getLastname());
     type(By.name("nickname"),contactData.getNickname());
     type(By.name("company"),contactData.getCompany());
@@ -65,10 +65,6 @@ public class ContactHelper extends HelperBase {
 
   public void editSpecifiedContact() {
     click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
-  }
-
-  public void gotoHomePage() {
-    click(By.linkText("home page"));
   }
 
   public void deleteContact() {

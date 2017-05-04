@@ -34,7 +34,6 @@ public class ContactModificatonTests extends TestBase {
             null),
             false);
     app.getContactHelper().submitContactModification();
-    app.getContactHelper().gotoHomePage();
+    app.getNavigationHelper().gotoHomePage();
   }
-
 }

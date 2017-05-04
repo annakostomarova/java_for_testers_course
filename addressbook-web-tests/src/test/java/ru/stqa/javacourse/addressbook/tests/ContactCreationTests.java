@@ -30,7 +30,6 @@ public class ContactCreationTests extends TestBase {
                 "test1"),
                 true);
         app.getContactHelper().submitNewContactCreation();
-        app.getContactHelper().gotoHomePage();
+        app.getNavigationHelper().gotoHomePage();
     }
-
 }
