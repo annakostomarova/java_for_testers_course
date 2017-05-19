@@ -3,6 +3,10 @@ package ru.stqa.javacourse.addressbook.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.javacourse.addressbook.model.ContactData;
+import ru.stqa.javacourse.addressbook.model.GroupData;
+
+import java.util.HashSet;
+import java.util.List;
 
 /**
  * Created by kostoa on 4/30/2017.
@@ -12,7 +16,6 @@ public class ContactModificatonTests extends TestBase {
   @Test
   public void testContactModification() {
     app.getNavigationHelper().gotoHomePage();
-    int before = app.getContactHelper().getContactCount();
     if (! app.getContactHelper().isThereAContact()) {
       app.getContactHelper().createContact(new ContactData(
                       "firstname",
@@ -36,10 +39,11 @@ public class ContactModificatonTests extends TestBase {
                       "test1"),
               true);
     }
+    List<ContactData> before = app.getContactHelper().getContactList();
     app.getNavigationHelper().gotoHomePage();
-    app.getContactHelper().selectContact(before - 1);
+    app.getContactHelper().selectContact(before.size() - 1);
     app.getContactHelper().editSpecifiedContact();
-    app.getContactHelper().fillAddNewForm(new ContactData(
+    ContactData contact = new ContactData(before.get(before.size() - 1).getId(),
             "Anna",
             null,
             "Ivanova",
@@ -58,11 +62,16 @@ public class ContactModificatonTests extends TestBase {
             "address2",
             "phone2",
             "notes",
-            null),
-            false);
+            null);
+    app.getContactHelper().fillAddNewForm(contact,false);
     app.getContactHelper().submitContactModification();
     app.getNavigationHelper().gotoHomePage();
-    int after = app.getContactHelper().getContactCount();
-    Assert.assertEquals(after, before);
+    List<ContactData> after = app.getContactHelper().getContactList();
+    Assert.assertEquals(after.size(), before.size());
+
+    before.remove(before.size() - 1);
+    before.add(contact);
+    Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
+
   }
 }
