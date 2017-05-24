@@ -42,7 +42,7 @@ public class ContactModificatonTests extends TestBase {
     List<ContactData> before = app.getContactHelper().getContactList();
     app.getNavigationHelper().gotoHomePage();
     app.getContactHelper().selectContact(before.size() - 1);
-    app.getContactHelper().editSpecifiedContact();
+    app.getContactHelper().editSpecifiedContact(before.size() - 1);
     ContactData contact = new ContactData(before.get(before.size() - 1).getId(),
             "Anna",
             null,
