@@ -1,9 +1,9 @@
 package ru.stqa.javacourse.addressbook.tests;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.javacourse.addressbook.model.ContactData;
-import ru.stqa.javacourse.addressbook.model.GroupData;
 
 import java.util.HashSet;
 import java.util.List;
@@ -13,8 +13,8 @@ import java.util.List;
  */
 public class ContactModificatonTests extends TestBase {
 
-  @Test
-  public void testContactModification() {
+  @BeforeMethod
+  public void ensurePreconditions() {
     app.getNavigationHelper().gotoHomePage();
     if (! app.getContactHelper().isThereAContact()) {
       app.getContactHelper().createContact(new ContactData(
@@ -39,11 +39,13 @@ public class ContactModificatonTests extends TestBase {
                       "test1"),
               true);
     }
+  }
+
+  @Test
+  public void testContactModification() {
     List<ContactData> before = app.getContactHelper().getContactList();
-    app.getNavigationHelper().gotoHomePage();
-    app.getContactHelper().selectContact(before.size() - 1);
-    app.getContactHelper().editSpecifiedContact(before.size() - 1);
-    ContactData contact = new ContactData(before.get(before.size() - 1).getId(),
+    int index = before.size()-1;
+    ContactData contact = new ContactData(before.get(index).getId(),
             "Anna",
             null,
             "Ivanova",
@@ -63,15 +65,14 @@ public class ContactModificatonTests extends TestBase {
             "phone2",
             "notes",
             null);
-    app.getContactHelper().fillAddNewForm(contact,false);
-    app.getContactHelper().submitContactModification();
+    app.getNavigationHelper().gotoHomePage();
+    app.getContactHelper().modifyContact(index, contact);
     app.getNavigationHelper().gotoHomePage();
     List<ContactData> after = app.getContactHelper().getContactList();
     Assert.assertEquals(after.size(), before.size());
 
-    before.remove(before.size() - 1);
+    before.remove(index);
     before.add(contact);
     Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
-
   }
 }

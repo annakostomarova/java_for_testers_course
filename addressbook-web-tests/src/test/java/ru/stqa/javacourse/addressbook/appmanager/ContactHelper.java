@@ -22,6 +22,19 @@ public class ContactHelper extends HelperBase {
     super(wd);
   }
 
+  public void createContact(ContactData contact, boolean b) {
+    gotoAddNew();
+    fillAddNewForm(contact, b);
+    submitNewContactCreation();
+  }
+
+  public void modifyContact(int index, ContactData contact) {
+    selectContact(index);
+    editSpecifiedContact(index);
+    fillAddNewForm(contact,false);
+    submitContactModification();
+  }
+
   public void fillAddNewForm(ContactData contactData, boolean creation) {
     this.creation = creation;
     type(By.name("firstname"),contactData.getFirstname());
@@ -78,12 +91,6 @@ public class ContactHelper extends HelperBase {
 
   public void acceptDeletion() {
     accept();
-  }
-
-  public void createContact(ContactData contact, boolean b) {
-    gotoAddNew();
-    fillAddNewForm(contact, b);
-    submitNewContactCreation();
   }
 
   public boolean isThereAContact() {
