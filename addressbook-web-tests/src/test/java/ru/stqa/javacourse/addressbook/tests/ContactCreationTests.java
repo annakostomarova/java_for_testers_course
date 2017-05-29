@@ -1,5 +1,6 @@
 package ru.stqa.javacourse.addressbook.tests;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.javacourse.addressbook.model.ContactData;
@@ -13,26 +14,26 @@ public class ContactCreationTests extends TestBase {
     public void testContactCreation() {
         app.goTo().homePage();
         List<ContactData> before = app.contact().list();
-        ContactData contact = new ContactData(
-                "firstname",
-                "middlename",
-                "lastname",
-                "nickname",
-                "company",
-                "title",
-                "address",
-                "homephone",
-                "mobilephone",
-                "workphone",
-                "fax",
-                "email@addressbook.com",
-                "email2@addressbook.com",
-                "email3@addressbook.com",
-                "homepage",
-                "address2",
-                "phone2",
-                "notes",
-                "test1");
+        ContactData contact = new ContactData()
+                .withFirstname("firstname")
+                .withMiddlename("middlename")
+                .withLastname("lastname")
+                .withtNickname("nickname")
+                .withTitle("title")
+                .withCompany("company")
+                .withAddress("address")
+                .withHomephone("homephone")
+                .withMobilephone("mobilephone")
+                .withWorkphone("workphone")
+                .withFax("fax")
+                .withEmail("email@addressbook.com")
+                .withEmail2("email2@addressbook.com")
+                .withEmail3("email3@addressbook.com")
+                .withHomepage("homepage")
+                .withAddress2("address2")
+                .withPhone2("phone2")
+                .withNotes("notes");
+
         app.contact().create(contact, true);
         app.goTo().homePage();
         List<ContactData> after = app.contact().list();
@@ -43,6 +44,5 @@ public class ContactCreationTests extends TestBase {
         before.sort(byId);
         after.sort(byId);
         Assert.assertEquals(before, after);
-
     }
 }

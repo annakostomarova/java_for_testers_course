@@ -5,18 +5,19 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.javacourse.addressbook.model.ContactData;
 
+import java.util.HashSet;
 import java.util.List;
 
 /**
  * Created by kostoa on 4/30/2017.
  */
-public class ContactDeletionTests extends TestBase {
+public class ContactModificationTests extends TestBase {
 
   @BeforeMethod
   public void ensurePreconditions() {
     app.goTo().homePage();
     if (app.contact().list().size() == 0) {
-      ContactData contact = new ContactData()
+      ContactData newcontact = new ContactData()
               .withFirstname("firstname")
               .withMiddlename("middlename")
               .withLastname("lastname")
@@ -35,18 +36,26 @@ public class ContactDeletionTests extends TestBase {
               .withAddress2("address2")
               .withPhone2("phone2")
               .withNotes("notes");
-      app.contact().create(contact, true);
+      app.contact().create(newcontact, true);
     }
   }
 
   @Test
-  public void testContactDeletion() {
+  public void testContactModification() {
     List<ContactData> before = app.contact().list();
-    int index = before.size() - 1;
+    int index = before.size()-1;
+    ContactData contact = new ContactData()
+            .withId(before.get(index).getId()).withFirstname("Anna").withLastname("Ivanova")
+            .withtNickname("Ivanushka").withAddress("Beverly Hills, 90210");
+
     app.goTo().homePage();
-    app.contact().delete(index);
+    app.contact().modify(index, contact);
     app.goTo().homePage();
     List<ContactData> after = app.contact().list();
-    Assert.assertEquals(after.size(), before.size()-1);
+    Assert.assertEquals(after.size(), before.size());
+
+    before.remove(index);
+    before.add(contact);
+    Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
   }
 }
