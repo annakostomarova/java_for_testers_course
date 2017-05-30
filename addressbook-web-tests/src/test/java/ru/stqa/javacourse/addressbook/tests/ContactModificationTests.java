@@ -4,9 +4,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.javacourse.addressbook.model.ContactData;
+import ru.stqa.javacourse.addressbook.model.GroupData;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by kostoa on 4/30/2017.
@@ -17,7 +19,7 @@ public class ContactModificationTests extends TestBase {
   public void ensurePreconditions() {
     app.goTo().homePage();
     if (app.contact().list().size() == 0) {
-      ContactData newcontact = new ContactData()
+      app.contact().create(new ContactData()
               .withFirstname("firstname")
               .withMiddlename("middlename")
               .withLastname("lastname")
@@ -35,27 +37,27 @@ public class ContactModificationTests extends TestBase {
               .withHomepage("homepage")
               .withAddress2("address2")
               .withPhone2("phone2")
-              .withNotes("notes");
-      app.contact().create(newcontact, true);
+              .withNotes("notes"),
+              true);
     }
   }
 
   @Test
   public void testContactModification() {
-    List<ContactData> before = app.contact().list();
-    int index = before.size()-1;
+    Set<ContactData> before = app.contact().all();
+    ContactData modifiedContact = before.iterator().next();
     ContactData contact = new ContactData()
-            .withId(before.get(index).getId()).withFirstname("Anna").withLastname("Ivanova")
+            .withId(modifiedContact.getId()).withFirstname("Anna").withLastname("Ivanova")
             .withtNickname("Ivanushka").withAddress("Beverly Hills, 90210");
-
     app.goTo().homePage();
-    app.contact().modify(index, contact);
+    app.contact().modify(contact);
     app.goTo().homePage();
-    List<ContactData> after = app.contact().list();
+    Set<ContactData> after = app.contact().all();
     Assert.assertEquals(after.size(), before.size());
 
-    before.remove(index);
+    before.remove(modifiedContact);
     before.add(contact);
-    Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
+    Assert.assertEquals(before, after);
   }
+
 }
