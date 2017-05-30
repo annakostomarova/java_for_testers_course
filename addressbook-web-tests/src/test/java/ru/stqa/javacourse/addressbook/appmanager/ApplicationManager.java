@@ -8,9 +8,6 @@ import org.openqa.selenium.remote.BrowserType;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created by kostoa on 4/29/2017.
- */
 public class ApplicationManager {
   WebDriver wd;
 

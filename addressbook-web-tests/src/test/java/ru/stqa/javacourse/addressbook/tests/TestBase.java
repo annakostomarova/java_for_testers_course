@@ -5,9 +5,6 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import ru.stqa.javacourse.addressbook.appmanager.ApplicationManager;
 
-/**
- * Created by kostoa on 4/29/2017.
- */
 public class TestBase {
 
   protected static final ApplicationManager app = new ApplicationManager(BrowserType.FIREFOX);

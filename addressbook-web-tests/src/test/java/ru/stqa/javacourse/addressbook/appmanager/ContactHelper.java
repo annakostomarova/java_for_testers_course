@@ -6,16 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.javacourse.addressbook.model.ContactData;
-import ru.stqa.javacourse.addressbook.model.GroupData;
+import ru.stqa.javacourse.addressbook.model.Contacts;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-/**
- * Created by kostoa on 4/29/2017.
- */
 public class ContactHelper extends HelperBase {
 
   public boolean creation;
@@ -35,12 +29,6 @@ public class ContactHelper extends HelperBase {
     editSpecifiedContact(contact.getId());
     fillAddNewForm(contact,false);
     submitContactModification();
-  }
-
-  public void delete(int index) {
-    selectContact(index);
-    deleteContact();
-    acceptDeletion();
   }
 
   public void delete(ContactData contact) {
@@ -123,24 +111,8 @@ public class ContactHelper extends HelperBase {
     return wd.findElements(By.name("selected[]")).size();
   }
 
-  public List<ContactData> list() {
-    List<ContactData> contacts = new ArrayList<>();
-    List<WebElement> rows = wd.findElements(By.cssSelector("tr[name=entry]"));
-
-    for(WebElement row : rows) {
-      List<WebElement> cells = row.findElements(By.cssSelector("td"));
-      String lastname = cells.get(1).getText();
-      String firstname = cells.get(2).getText();
-      int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("value"));
-      ContactData contact = new ContactData()
-              .withId(id).withFirstname(firstname).withLastname(lastname);
-      contacts.add(contact);
-    }
-    return contacts;
-  }
-
-  public Set<ContactData> all() {
-    Set<ContactData> contacts = new HashSet<>();
+  public Contacts all() {
+    Contacts contacts = new Contacts();
     List<WebElement> rows = wd.findElements(By.cssSelector("tr[name=entry]"));
 
     for(WebElement row : rows) {
