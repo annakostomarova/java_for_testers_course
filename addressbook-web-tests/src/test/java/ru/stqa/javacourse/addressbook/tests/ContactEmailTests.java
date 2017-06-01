@@ -3,13 +3,14 @@ package ru.stqa.javacourse.addressbook.tests;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.javacourse.addressbook.model.ContactData;
-import ru.stqa.javacourse.addressbook.model.Contacts;
+
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class ContactDeletionTests extends TestBase {
-
+public class ContactEmailTests extends TestBase {
   @BeforeMethod
   public void ensurePreconditions() {
     app.goTo().homePage();
@@ -22,16 +23,16 @@ public class ContactDeletionTests extends TestBase {
                       .withTitle("title")
                       .withCompany("company")
                       .withAddress("address")
-                      .withHomephone("111homephone")
-                      .withMobilephone("222mobilephone")
-                      .withWorkphone("333workphone")
+                      .withHomephone("homephone")
+                      .withMobilephone("mobilephone")
+                      .withWorkphone("workphone")
                       .withFax("fax")
                       .withEmail("email@addressbook.com")
                       .withEmail2("email2@addressbook.com")
                       .withEmail3("email3@addressbook.com")
                       .withHomepage("homepage")
                       .withAddress2("address2")
-                      .withPhone2("444phone2")
+                      .withPhone2("phone2")
                       .withNotes("notes")
                       .withGroup("test1"),
               true);
@@ -39,16 +40,22 @@ public class ContactDeletionTests extends TestBase {
   }
 
   @Test
-  public void testContactDeletion() {
-    Contacts before = app.contact().all();
-    ContactData deletedContact = before.iterator().next();
+  public void testContactEmails() {
     app.goTo().homePage();
-    app.contact().delete(deletedContact);
-    app.goTo().homePage();
-    assertThat(app.contact().count(),equalTo(before.size()-1));
+    ContactData contact = app.contact().all().iterator().next();
+    ContactData contactInfoFromEditForm = app.contact().infoFromEditForm(contact);
 
-    Contacts after = app.contact().all();
-    assertThat(after, equalTo(before.withoutAdded(deletedContact)));
+    assertThat(contact.getAllEmails(), equalTo(mergeEmails(contactInfoFromEditForm)));
   }
 
+  private String mergeEmails(ContactData contact) {
+    return Arrays.asList(contact.getEmail(), contact.getEmail2(), contact.getEmail3())
+            .stream().filter((s) -> ! s.equals(""))
+            .map(ContactEmailTests::cleaned)
+            .collect(Collectors.joining("\n"));
+  }
+
+  public static String cleaned(String email) {
+    return email.replaceAll("\\s","").replaceAll("[-()]","");
+  }
 }

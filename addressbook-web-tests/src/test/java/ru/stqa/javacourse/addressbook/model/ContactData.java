@@ -21,7 +21,8 @@ public class ContactData {
   private String phone2;
   private String notes;
   private String group;
-
+  private String allPhones;
+  private String allEmails;
 
 
   public int getId() {
@@ -100,9 +101,16 @@ public class ContactData {
     return notes;
   }
 
-
   public String getGroup() {
     return group;
+  }
+
+  public String getAllPhones() {
+    return allPhones;
+  }
+
+  public String getAllEmails() {
+    return allEmails;
   }
 
 
@@ -206,6 +214,15 @@ public class ContactData {
     return this;
   }
 
+  public ContactData withAllPhones(String allPhones) {
+    this.allPhones = allPhones;
+    return this;
+  }
+
+  public ContactData withAllEmails(String allEmails) {
+    this.allEmails = allEmails;
+    return this;
+  }
 
 
   @Override
