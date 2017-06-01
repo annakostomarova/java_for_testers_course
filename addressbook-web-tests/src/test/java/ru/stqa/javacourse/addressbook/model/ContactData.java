@@ -23,6 +23,7 @@ public class ContactData {
   private String group;
 
 
+
   public int getId() {
     return id;
   }
@@ -98,6 +99,7 @@ public class ContactData {
   public String getNotes() {
     return notes;
   }
+
 
   public String getGroup() {
     return group;
@@ -203,6 +205,7 @@ public class ContactData {
     this.group = group;
     return this;
   }
+
 
 
   @Override

@@ -71,6 +71,7 @@ public class ContactHelper extends HelperBase {
     } else {
       Assert.assertFalse(isElementPresent(By.name("new_group")));
     }
+
   }
 
   public void gotoAddNew() {
@@ -91,8 +92,21 @@ public class ContactHelper extends HelperBase {
   }
    ****/
 
-  public void editSpecifiedContact(int id) {
-    wd.findElements(By.cssSelector("input[value='" + id + "']")).get(id).findElement(By.xpath("//img[contains(@title,'Edit')]")).click();
+  public void editSpecifiedContact(int index) {
+    /*
+    wd.findElements(By.cssSelector("input[value='" + id + "']")).findElement(By.xpath("//img[contains(@title,'Edit')]")).click();
+    wd.findElements(By.cssSelector("input[value='" + id + "']")).get(id).findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+    wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+    wd.findElements(By.name("selected[]")).get(index).findElement(By.xpath("//img[contains(@title,'Edit')]")).click();
+    */
+    wd.findElements(By.name("selected[]")).get(index).findElement(By.xpath("//img[contains(@title,'Edit')]")).click();
+    /*
+
+    wd.findElements(By.cssSelector("input[value='" + id + "']")).findElement(By.xpath("//img[contains(@title,'Edit')]")).click();
+
+    wd.findElements(By.name("selected[]")).get(index).click();
+    wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
+    */
   }
 
   public void deleteContact() {

@@ -33,7 +33,8 @@ public class ContactModificationTests extends TestBase {
               .withHomepage("homepage")
               .withAddress2("address2")
               .withPhone2("phone2")
-              .withNotes("notes"),
+              .withNotes("notes")
+              .withGroup("test1"),
               true);
     }
   }
