@@ -32,7 +32,8 @@ public class ContactCreationTests extends TestBase {
                 .withHomepage("homepage")
                 .withAddress2("address2")
                 .withPhone2("phone2")
-                .withNotes("notes");
+                .withNotes("notes")
+                .withGroup("test1");
 
         app.contact().create(contact, true);
         app.goTo().homePage();

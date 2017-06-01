@@ -4,6 +4,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.javacourse.addressbook.model.ContactData;
 import ru.stqa.javacourse.addressbook.model.Contacts;
+import ru.stqa.javacourse.addressbook.model.GroupData;
+import ru.stqa.javacourse.addressbook.model.Groups;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -33,7 +35,8 @@ public class ContactDeletionTests extends TestBase {
                       .withHomepage("homepage")
                       .withAddress2("address2")
                       .withPhone2("phone2")
-                      .withNotes("notes"),
+                      .withNotes("notes")
+                      .withGroup("test1"),
               true);
     }
   }
