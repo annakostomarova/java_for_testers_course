@@ -1,8 +1,9 @@
-package ru.stqa.javacourse.addressbook.tests;
+package ru.stqa.javacourse.addressbook.tests.contacts;
 
 import org.testng.annotations.Test;
 import ru.stqa.javacourse.addressbook.model.ContactData;
 import ru.stqa.javacourse.addressbook.model.Contacts;
+import ru.stqa.javacourse.addressbook.tests.TestBase;
 
 import java.io.File;
 

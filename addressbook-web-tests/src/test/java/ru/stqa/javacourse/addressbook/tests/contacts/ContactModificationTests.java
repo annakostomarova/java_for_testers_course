@@ -1,13 +1,15 @@
-package ru.stqa.javacourse.addressbook.tests;
+package ru.stqa.javacourse.addressbook.tests.contacts;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.javacourse.addressbook.model.ContactData;
+import ru.stqa.javacourse.addressbook.model.Contacts;
+import ru.stqa.javacourse.addressbook.tests.TestBase;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class ContactPostAddressTests extends TestBase {
+public class ContactModificationTests extends TestBase {
 
   @BeforeMethod
   public void ensurePreconditions() {
@@ -30,13 +32,19 @@ public class ContactPostAddressTests extends TestBase {
   }
 
   @Test
-  public void testContactPostAddress() {
+  public void testContactModification() {
+    Contacts before = app.contact().all();
+    ContactData modifiedContact = before.iterator().next();
+    ContactData contact = new ContactData()
+            .withId(modifiedContact.getId()).withFirstName("Anna").withLastName("Ivanova")
+            .withNickName("Ivanushka").withAddress("Beverly Hills, 90210");
     app.goTo().homePage();
-    ContactData contact = app.contact().all().iterator().next();
-    ContactData contactInfoFromEditForm = app.contact().infoFromEditForm(contact);
+    app.contact().modify(contact);
+    app.goTo().homePage();
+    assertThat(app.contact().count(),equalTo(before.size()));
 
-    assertThat(contact.getAddress(), equalTo(contactInfoFromEditForm.getAddress()));
-
+    Contacts after = app.contact().all();
+    assertThat(after, equalTo(before.withoutAdded(modifiedContact).withAdded(contact)));
   }
 
 }

@@ -1,14 +1,15 @@
-package ru.stqa.javacourse.addressbook.tests;
+package ru.stqa.javacourse.addressbook.tests.contacts;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.javacourse.addressbook.model.ContactData;
 import ru.stqa.javacourse.addressbook.model.Contacts;
+import ru.stqa.javacourse.addressbook.tests.TestBase;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class ContactModificationTests extends TestBase {
+public class ContactDeletionTests extends TestBase {
 
   @BeforeMethod
   public void ensurePreconditions() {
@@ -31,19 +32,16 @@ public class ContactModificationTests extends TestBase {
   }
 
   @Test
-  public void testContactModification() {
+  public void testContactDeletion() {
     Contacts before = app.contact().all();
-    ContactData modifiedContact = before.iterator().next();
-    ContactData contact = new ContactData()
-            .withId(modifiedContact.getId()).withFirstName("Anna").withLastName("Ivanova")
-            .withNickName("Ivanushka").withAddress("Beverly Hills, 90210");
+    ContactData deletedContact = before.iterator().next();
     app.goTo().homePage();
-    app.contact().modify(contact);
+    app.contact().delete(deletedContact);
     app.goTo().homePage();
-    assertThat(app.contact().count(),equalTo(before.size()));
+    assertThat(app.contact().count(),equalTo(before.size()-1));
 
     Contacts after = app.contact().all();
-    assertThat(after, equalTo(before.withoutAdded(modifiedContact).withAdded(contact)));
+    assertThat(after, equalTo(before.withoutAdded(deletedContact)));
   }
 
 }

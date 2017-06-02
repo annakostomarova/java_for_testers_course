@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.javacourse.addressbook.model.ContactData;
 import ru.stqa.javacourse.addressbook.model.Contacts;
-import ru.stqa.javacourse.addressbook.tests.ContactViewTests;
+import ru.stqa.javacourse.addressbook.tests.contacts.ContactViewTests;
 
 import java.util.Arrays;
 import java.util.List;

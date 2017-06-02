@@ -1,8 +1,9 @@
-package ru.stqa.javacourse.addressbook.tests;
+package ru.stqa.javacourse.addressbook.tests.groups;
 
 import org.testng.annotations.Test;
 import ru.stqa.javacourse.addressbook.model.GroupData;
 import ru.stqa.javacourse.addressbook.model.Groups;
+import ru.stqa.javacourse.addressbook.tests.TestBase;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
