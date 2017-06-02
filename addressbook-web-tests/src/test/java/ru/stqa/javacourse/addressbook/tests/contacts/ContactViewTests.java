@@ -25,7 +25,7 @@ public class ContactViewTests extends TestBase {
 
   private String mergeInfoFromEditForm(ContactData contact) {
     return Arrays.asList(contact.getLastname(),contact.getFirstname(),contact.getMiddlename(),
-            contact.getHomephone(), contact.getMobilephone(), contact.getWorkphone(),
+            contact.getHomePhone(), contact.getMobilePhone(), contact.getWorkPhone(),
             contact.getEmail(), contact.getEmail2(), contact.getEmail3(),contact.getAddress())
             .stream().filter((s) -> ! s.equals(""))
             .map(ContactViewTests::cleaned)
