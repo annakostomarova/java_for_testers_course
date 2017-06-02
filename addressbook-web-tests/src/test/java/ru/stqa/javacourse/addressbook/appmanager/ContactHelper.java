@@ -7,8 +7,11 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.javacourse.addressbook.model.ContactData;
 import ru.stqa.javacourse.addressbook.model.Contacts;
+import ru.stqa.javacourse.addressbook.tests.ContactViewTests;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ContactHelper extends HelperBase {
 
@@ -88,6 +91,10 @@ public class ContactHelper extends HelperBase {
     wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%d']", id))).click();
   }
 
+  private void displayContactInfoById(int id) {
+    wd.findElement(By.cssSelector(String.format("a[href='view.php?id=%d']", id))).click();
+  }
+
   public void deleteContact() {
     click(By.xpath("//div[@id='content']/form[2]/div[2]/input"));
   }
@@ -117,10 +124,26 @@ public class ContactHelper extends HelperBase {
     String email2 = wd.findElement(By.name("email2")).getAttribute("value");
     String email3 = wd.findElement(By.name("email3")).getAttribute("value");
     wd.navigate().back();
-    return new ContactData().withId(contact.getId()).withFirstname(firstname).withLastname(lastname)
-            .withAddress(address).withHomephone(home).withWorkphone(work).withMobilephone(mobile).withPhone2(phone2)
+    return new ContactData().withId(contact.getId()).withFirstName(firstname).withLastName(lastname)
+            .withAddress(address).withHomePhone(home).withWorkPhone(work).withMobilePhone(mobile).withPhone2(phone2)
             .withEmail(email).withEmail2(email2).withEmail3(email3);
   }
+
+  public ContactData infoFromViewForm(ContactData contact) {
+    selectContactById(contact.getId());
+    displayContactInfoById(contact.getId());
+    String viewAllInfo = wd.findElement(By.xpath("//div[@id='content']")).getText();
+    wd.navigate().back();
+    return new ContactData().withId(contact.getId()).withViewAllInfo(viewAllInfo);
+  }
+
+  public String mergeInfoFromViewForm(ContactData contact) {
+    return Arrays.asList(contact.getViewAllInfo())
+            .stream().filter((s) -> ! s.equals(""))
+            .map(ContactViewTests::cleaned)
+            .collect(Collectors.joining("\n"));
+  }
+
 
   private Contacts contactCache = null;
 
@@ -138,7 +161,7 @@ public class ContactHelper extends HelperBase {
       String address = cells.get(3).getText();
       String allEmails = cells.get(4).getText();
       String allPhones = cells.get(5).getText();
-      contactCache.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname)
+      contactCache.add(new ContactData().withId(id).withFirstName(firstname).withLastName(lastname)
                 .withAddress(address).withAllPhones(allPhones).withAllEmails(allEmails));
     }
     return new Contacts(contactCache);

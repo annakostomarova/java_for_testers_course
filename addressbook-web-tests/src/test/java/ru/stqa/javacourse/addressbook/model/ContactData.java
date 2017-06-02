@@ -23,6 +23,7 @@ public class ContactData {
   private String group;
   private String allPhones;
   private String allEmails;
+  private String viewAllInfo;
 
 
   public int getId() {
@@ -113,28 +114,32 @@ public class ContactData {
     return allEmails;
   }
 
+  public String getViewAllInfo() {
+    return viewAllInfo;
+  }
+
 
   public ContactData withId(int id) {
     this.id = id;
     return this;
   }
 
-  public ContactData withFirstname(String firstname) {
+  public ContactData withFirstName(String firstname) {
     this.firstname = firstname;
     return this;
   }
 
-  public ContactData withLastname(String lastname) {
+  public ContactData withLastName(String lastname) {
     this.lastname = lastname;
     return this;
   }
 
-  public ContactData withMiddlename(String middlename) {
+  public ContactData withMiddleName(String middlename) {
     this.middlename = middlename;
     return this;
   }
 
-  public ContactData withtNickname(String nickname) {
+  public ContactData withNickName(String nickname) {
     this.nickname = nickname;
     return this;
   }
@@ -154,17 +159,17 @@ public class ContactData {
     return this;
   }
 
-  public ContactData withHomephone(String homephone) {
+  public ContactData withHomePhone(String homephone) {
     this.homephone = homephone;
     return this;
   }
 
-  public ContactData withMobilephone(String mobilephone) {
+  public ContactData withMobilePhone(String mobilephone) {
     this.mobilephone = mobilephone;
     return this;
   }
 
-  public ContactData withWorkphone(String workphone) {
+  public ContactData withWorkPhone(String workphone) {
     this.workphone = workphone;
     return this;
   }
@@ -189,7 +194,7 @@ public class ContactData {
     return this;
   }
 
-  public ContactData withHomepage(String homepage) {
+  public ContactData withHomePage(String homepage) {
     this.homepage = homepage;
     return this;
   }
@@ -223,6 +228,12 @@ public class ContactData {
     this.allEmails = allEmails;
     return this;
   }
+
+  public ContactData withViewAllInfo(String viewAllInfo) {
+    this.viewAllInfo = viewAllInfo;
+    return this;
+  }
+
 
 
   @Override
