@@ -14,25 +14,17 @@ public class ContactPostAddressTests extends TestBase {
     app.goTo().homePage();
     if (app.contact().all().size() == 0) {
       app.contact().create(new ContactData()
-                      .withFirstName("firstname")
-                      .withMiddleName("middlename")
-                      .withLastName("lastname")
-                      .withNickName("nickname")
-                      .withTitle("title")
-                      .withCompany("company")
-                      .withAddress("address")
-                      .withHomePhone("homephone")
-                      .withMobilePhone("mobilephone")
-                      .withWorkPhone("workphone")
-                      .withFax("fax")
-                      .withEmail("email@addressbook.com")
-                      .withEmail2("email2@addressbook.com")
-                      .withEmail3("email3@addressbook.com")
-                      .withHomePage("homepage")
-                      .withAddress2("address2")
-                      .withPhone2("phone2")
-                      .withNotes("notes")
-                      .withGroup("test1"),
+              .withFirstName("Firstname")
+              .withMiddleName("Middlename")
+              .withLastName("Lastname")
+              .withAddress("Address")
+              .withHomePhone("111homephone")
+              .withMobilePhone("222mobilephone")
+              .withWorkPhone("333workphone")
+              .withEmail("email@addressbook.com")
+              .withEmail2("email2@addressbook.com")
+              .withEmail3("email3@addressbook.com")
+              .withGroup("test1"),
               true);
     }
   }
