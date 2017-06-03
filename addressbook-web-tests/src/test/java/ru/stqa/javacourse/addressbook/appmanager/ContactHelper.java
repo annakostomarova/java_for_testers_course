@@ -92,7 +92,7 @@ public class ContactHelper extends HelperBase {
     wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%d']", id))).click();
   }
 
-  private void displayContactInfoById(int id) {
+  public void displayContactInfoById(int id) {
     wd.findElement(By.cssSelector(String.format("a[href='view.php?id=%d']", id))).click();
   }
 
@@ -130,13 +130,23 @@ public class ContactHelper extends HelperBase {
             .withEmail(email).withEmail2(email2).withEmail3(email3);
   }
 
-  public ContactData infoFromViewForm(ContactData contact) {
-    selectContactById(contact.getId());
-    displayContactInfoById(contact.getId());
+  public ContactData infoFromViewForm(int id) {
+    selectContactById(id);
+    displayContactInfoById(id);
     String viewAllInfo = wd.findElement(By.xpath("//div[@id='content']")).getText();
     wd.navigate().back();
-    return new ContactData().withId(contact.getId()).withViewAllInfo(viewAllInfo);
+    return new ContactData().withId(id).withViewAllInfo(viewAllInfo);
   }
+
+  /****
+   public ContactData infoFromViewForm(ContactData contact) {
+   selectContactById(contact.getId());
+   displayContactInfoById(contact.getId());
+   String viewAllInfo = wd.findElement(By.xpath("//div[@id='content']")).getText();
+   wd.navigate().back();
+   return new ContactData().withId(contact.getId()).withViewAllInfo(viewAllInfo);
+   }
+   */
 
   public String mergeInfoFromViewForm(ContactData contact) {
     return Arrays.asList(contact.getViewAllInfo())

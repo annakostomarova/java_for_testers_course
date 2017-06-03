@@ -1,11 +1,13 @@
 package ru.stqa.javacourse.addressbook.tests.contacts;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import ru.stqa.javacourse.addressbook.model.ContactData;
 import ru.stqa.javacourse.addressbook.tests.TestBase;
-
 import java.util.Arrays;
 import java.util.stream.Collectors;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ContactViewTests extends TestBase {
 
@@ -15,13 +17,11 @@ public class ContactViewTests extends TestBase {
     ContactData contact = app.contact().all().iterator().next();
 
 
-    ContactData contactInfoFromViewForm = app.contact().infoFromViewForm(contact);
+    ContactData contactInfoFromViewForm = app.contact().infoFromViewForm(contact.getId());
     ContactData contactInfoFromEditForm = app.contact().infoFromEditForm(contact);
-/****
-    assertThat(mergeInfoFromViewForm(contactInfoFromViewForm), equalTo(mergeInfoFromEditForm(contactInfoFromEditForm)));
-*****/
-  }
 
+    assertThat(app.contact().mergeInfoFromViewForm(contactInfoFromViewForm), equalTo(mergeInfoFromEditForm(contactInfoFromEditForm)));
+  }
 
   private String mergeInfoFromEditForm(ContactData contact) {
     return Arrays.asList(contact.getLastname(),contact.getFirstname(),contact.getMiddlename(),
