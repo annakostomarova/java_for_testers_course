@@ -1,11 +1,12 @@
 package ru.stqa.javacourse.addressbook.tests.contacts;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import ru.stqa.javacourse.addressbook.model.ContactData;
 import ru.stqa.javacourse.addressbook.tests.TestBase;
+
 import java.util.Arrays;
 import java.util.stream.Collectors;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 

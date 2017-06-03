@@ -3,6 +3,8 @@ package ru.stqa.javacourse.addressbook.generators;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.ParameterException;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.thoughtworks.xstream.XStream;
 import ru.stqa.javacourse.addressbook.model.ContactData;
 import ru.stqa.javacourse.addressbook.model.GroupData;
@@ -44,29 +46,39 @@ public class ContactDataGenerator {
       saveAsCSV(contacts, new File(file));
     } else if (format.equals("xml")){
       saveAsXML(contacts, new File(file));
-    } else {
-      System.out.println("Unrecognized format");
+    } else if (format.equals("json")){
+      saveAsJSON(contacts, new File(file));
+    }else {
+      System.out.println("Unrecognized format" + format);
     }
   }
 
-
-  private static void saveAsCSV(List<ContactData> contacts, File file) throws IOException{
-    Writer writer = new FileWriter(file);
-    for (ContactData contact : contacts) {
-      writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s\n", contact.getLastname(), contact.getFirstname(), contact.getMiddlename(),
-              contact.getAddress(), contact.getEmail(), contact.getHomePhone(), contact.getMobilePhone(), contact.getGroup()));
+  private void saveAsJSON(List<ContactData> contacts, File file) throws IOException {
+    Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    String json = gson.toJson(contacts);
+    try (Writer writer = new FileWriter(file)) {
+      writer.write(json);
     }
-    writer.close();
   }
 
   private void saveAsXML(List<ContactData> contacts, File file) throws IOException {
     XStream xstream = new XStream();
     xstream.processAnnotations(ContactData.class);
     String xml = xstream.toXML(contacts);
-    Writer writer = new FileWriter(file);
-    writer.write(xml);
-    writer.close();
+    try (Writer writer = new FileWriter(file)) {
+      writer.write(xml);
+    }
   }
+
+  private static void saveAsCSV(List<ContactData> contacts, File file) throws IOException{
+    try (Writer writer = new FileWriter(file)) {
+      for (ContactData contact : contacts) {
+        writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s\n", contact.getLastname(), contact.getFirstname(), contact.getMiddlename(),
+                contact.getAddress(), contact.getEmail(), contact.getHomePhone(), contact.getMobilePhone(), contact.getGroup()));
+      }
+    }
+  }
+
 
   private static List<ContactData> generateContact(int count) {
     List<ContactData> contacts = new ArrayList<>();

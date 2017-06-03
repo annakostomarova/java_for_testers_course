@@ -1,0 +1,46 @@
+[
+  {
+    "id": 2147483647,
+    "firstname": "Ivan0",
+    "lastname": "Ivanov0",
+    "middlename": "Kozma0",
+    "address": "New Vasuki0",
+    "homephone": "911-00-00",
+    "mobilephone": "+7(911) 100 44 50",
+    "email": "email0@addressbook.com",
+    "group": "test0"
+  },
+  {
+    "id": 2147483647,
+    "firstname": "Ivan1",
+    "lastname": "Ivanov1",
+    "middlename": "Kozma1",
+    "address": "New Vasuki1",
+    "homephone": "911-00-01",
+    "mobilephone": "+7(911) 100 44 51",
+    "email": "email1@addressbook.com",
+    "group": "test1"
+  },
+  {
+    "id": 2147483647,
+    "firstname": "Ivan2",
+    "lastname": "Ivanov2",
+    "middlename": "Kozma2",
+    "address": "New Vasuki2",
+    "homephone": "911-00-02",
+    "mobilephone": "+7(911) 100 44 52",
+    "email": "email2@addressbook.com",
+    "group": "test2"
+  },
+  {
+    "id": 2147483647,
+    "firstname": "Ivan3",
+    "lastname": "Ivanov3",
+    "middlename": "Kozma3",
+    "address": "New Vasuki3",
+    "homephone": "911-00-03",
+    "mobilephone": "+7(911) 100 44 53",
+    "email": "email3@addressbook.com",
+    "group": "test3"
+  }
+]
