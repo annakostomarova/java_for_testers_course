@@ -1,14 +1,17 @@
 package ru.stqa.javacourse.addressbook.tests.groups;
 
+import com.thoughtworks.xstream.XStream;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.stqa.javacourse.addressbook.model.GroupData;
 import ru.stqa.javacourse.addressbook.model.Groups;
 import ru.stqa.javacourse.addressbook.tests.TestBase;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -16,12 +19,19 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class GroupCreationTests extends TestBase {
 
   @DataProvider
-  public Iterator<Object[]> validGroups() {
+  public Iterator<Object[]> validGroups() throws IOException {
     List<Object[]> list = new ArrayList<Object[]>();
-    list.add(new Object[] {new GroupData().withName("test1").withHeader("header 1").withFooter("footer 1")});
-    list.add(new Object[] {new GroupData().withName("test2").withHeader("header 2").withFooter("footer 2")});
-    list.add(new Object[] {new GroupData().withName("test3").withHeader("header 3").withFooter("footer 3")});
-    return list.iterator();
+    BufferedReader reader = new BufferedReader(new FileReader("src/test/resources/groups.xml"));
+    String xml = "";
+    String line = reader.readLine();
+    while (line != null) {
+      xml += line;
+      line = reader.readLine();
+    }
+    XStream xstream = new XStream();
+    xstream.processAnnotations(GroupData.class);
+    List<GroupData> groups = (List<GroupData>)xstream.fromXML(xml);
+    return groups.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
   }
 
   @Test(dataProvider = "validGroups")
@@ -35,7 +45,7 @@ public class GroupCreationTests extends TestBase {
             before.withAdded(group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
   }
 
-  @Test
+  @Test(enabled = false)
   public void testInvalidGroupCreation() {
     app.goTo().groupPage();
     Groups before = app.group().all();

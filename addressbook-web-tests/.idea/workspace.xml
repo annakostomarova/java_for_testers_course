@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1939bdf-2cec-4eb1-9a34-a406e3322a75" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beust_jcommander_1_69.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_thoughtworks_xstream_xstream_1_4_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__xmlpull_xmlpull_1_1_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__xpp3_xpp3_min_1_1_4c.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beust_jcommander_1_64.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests_main.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/appmanager/ContactHelper.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/appmanager/ContactHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/contacts/ContactViewTests.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/contacts/ContactViewTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/generators/ContactDataGenerator.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/generators/ContactDataGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/generators/GroupDataGenerator.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/generators/GroupDataGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/model/ContactData.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/model/ContactData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/model/GroupData.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/model/GroupData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/contacts/ContactCreationTests.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/contacts/ContactCreationTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/groups/GroupCreationTests.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/groups/GroupCreationTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/contacts.csv" afterPath="$PROJECT_DIR$/src/test/resources/contacts.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/groups.csv" afterPath="$PROJECT_DIR$/src/test/resources/groups.csv" />
     </list>
     <ignored path="addressbook-web-tests.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,6 +43,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <PATH>
@@ -51,65 +68,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ContactHelper.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/appmanager/ContactHelper.java">
+      <file leaf-file-name="ContactDataGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/generators/ContactDataGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+            <state relative-caret-position="-210">
+              <caret line="43" column="42" lean-forward="false" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactCreationTests.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ContactCreationTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/contacts/ContactCreationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroupCreationTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/groups/GroupCreationTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="22" column="103" lean-forward="false" selection-start-line="22" selection-start-column="103" selection-end-line="22" selection-end-column="103" />
+            <state relative-caret-position="336">
+              <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
               <folding>
-                <element signature="e#629#639#0" expanded="true" />
+                <element signature="e#879#889#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactViewTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/contacts/ContactViewTests.java">
+      <file leaf-file-name="contacts.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/contacts.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContactPostAddressTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/contacts/ContactPostAddressTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="52" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/model/ContactData.java">
+      <file leaf-file-name="contacts.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/contacts.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="238" column="21" lean-forward="false" selection-start-line="238" selection-start-column="21" selection-end-line="238" selection-end-column="21" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GroupDataGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/generators/GroupDataGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-504">
+              <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -310,7 +315,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="2989393553238" />
+        <entry key="$PROJECT_DIR$" value="2992834978884" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="4160081731" />
+        <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="1114575256" />
         <entry key="$PROJECT_DIR$/../sandbox" value="1493221538555" />
       </map>
     </option>
@@ -495,7 +502,6 @@
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/GroupDeletionTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/GroupModificationTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/ContactViewTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/model/ContactData.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/appmanager/HelperBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/TestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/ContactCreationTests.java" />
@@ -504,14 +510,17 @@
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/ContactEmailTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/ContactPhoneTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/ContactPostAddressTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/appmanager/ContactHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/contacts/ContactViewTests.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/contacts.csv" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/contacts/ContactCreationTests.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/model/GroupData.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/groups.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/groups/GroupCreationTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/model/ContactData.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/generators/GroupDataGenerator.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/generators/ContactDataGenerator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/groups/GroupCreationTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/appmanager/ContactHelper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/contacts/ContactViewTests.java" />
       </list>
     </option>
   </component>
@@ -786,47 +795,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ContactViewTests">
-    <configuration default="false" name="GroupDataGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.javacourse.addressbook.generators.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.javacourse.addressbook.generators.GroupDataGenerator" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-c 20 -f src/test/resources/groups.csv" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="addressbook-web-tests_test" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="ContactDataGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.javacourse.addressbook.generators.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.javacourse.addressbook.generators.ContactDataGenerator" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-c 15 -f src/test/resources/contacts.csv" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="addressbook-web-tests_test" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.ContactDataGenerator">
     <configuration default="false" name="GroupCreationTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -924,6 +893,46 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="GroupDataGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.javacourse.addressbook.generators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.javacourse.addressbook.generators.GroupDataGenerator" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="-c 3 -f src/test/resources/groups.xml -d xml" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="addressbook-web-tests_test" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ContactDataGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.javacourse.addressbook.generators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.javacourse.addressbook.generators.ContactDataGenerator" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="-c 4 -f src/test/resources/contacts.xml -d xml" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="addressbook-web-tests_test" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -1078,19 +1087,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.GroupDataGenerator" />
-      <item index="1" class="java.lang.String" itemvalue="Application.ContactDataGenerator" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.GroupCreationTests" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.ContactCreationTests" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.ContactViewTests" />
+      <item index="0" class="java.lang.String" itemvalue="TestNG.GroupCreationTests" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.ContactCreationTests" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.ContactViewTests" />
+      <item index="3" class="java.lang.String" itemvalue="Application.GroupDataGenerator" />
+      <item index="4" class="java.lang.String" itemvalue="Application.ContactDataGenerator" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.ContactViewTests" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ContactDataGenerator" />
         <item index="1" class="java.lang.String" itemvalue="TestNG.GroupCreationTests" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.ContactCreationTests" />
-        <item index="3" class="java.lang.String" itemvalue="Application.ContactDataGenerator" />
-        <item index="4" class="java.lang.String" itemvalue="Application.GroupDataGenerator" />
+        <item index="2" class="java.lang.String" itemvalue="Application.GroupDataGenerator" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.ContactCreationTests" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.ContactViewTests" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
@@ -1114,17 +1123,14 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ContactCreationTests - 2017.06.03 at 01h 00m 54s.xml">
+    <history-entry file="ContactCreationTests - 2017.06.03 at 15h 27m 39s.xml">
       <configuration name="ContactCreationTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContactCreationTests - 2017.06.03 at 01h 07m 23s.xml">
+    <history-entry file="ContactCreationTests - 2017.06.03 at 15h 31m 26s.xml">
       <configuration name="ContactCreationTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContactCreationTests - 2017.06.03 at 02h 22m 56s.xml">
+    <history-entry file="ContactCreationTests - 2017.06.03 at 15h 35m 09s.xml">
       <configuration name="ContactCreationTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="GroupCreationTests - 2017.06.03 at 02h 22m 32s.xml">
-      <configuration name="GroupCreationTests" configurationId="TestNG" />
     </history-entry>
     <history-entry file="GroupCreationTests - 2017.06.03 at 02h 23m 19s.xml">
       <configuration name="GroupCreationTests" configurationId="TestNG" />
@@ -1135,14 +1141,17 @@
     <history-entry file="GroupCreationTests - 2017.06.03 at 13h 13m 57s.xml">
       <configuration name="GroupCreationTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ru_stqa_javacourse_addressbook_tests_contacts - 2017.06.03 at 01h 11m 13s.xml">
-      <configuration name="ru.stqa.javacourse.addressbook.tests.contacts" configurationId="TestNG" />
+    <history-entry file="GroupCreationTests - 2017.06.03 at 15h 17m 45s.xml">
+      <configuration name="GroupCreationTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ru_stqa_javacourse_addressbook_tests_groups - 2017.06.03 at 01h 11m 44s.xml">
-      <configuration name="ru.stqa.javacourse.addressbook.tests.groups" configurationId="TestNG" />
+    <history-entry file="GroupCreationTests - 2017.06.03 at 15h 34m 41s.xml">
+      <configuration name="GroupCreationTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ru_stqa_javacourse_addressbook_tests_groups - 2017.06.03 at 01h 23m 43s.xml">
-      <configuration name="ru.stqa.javacourse.addressbook.tests.groups" configurationId="TestNG" />
+    <history-entry file="GroupCreationTests - 2017.06.03 at 16h 00m 11s.xml">
+      <configuration name="GroupCreationTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GroupCreationTests - 2017.06.03 at 16h 01m 07s.xml">
+      <configuration name="GroupCreationTests" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -1155,26 +1164,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="0" width="1598" height="852" extended-state="1" />
-    <editor active="true" />
+    <frame x="1" y="0" width="1598" height="852" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905483" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11881188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3222061" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34072345" sideWeight="0.5024661" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33946252" sideWeight="0.49753392" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33817127" sideWeight="0.49753392" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2700394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19185282" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956153" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298292" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969174" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969174" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31785196" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25689405" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1227,12 +1235,6 @@
           <line>25</line>
           <properties />
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/appmanager/ContactHelper.java</url>
-          <line>69</line>
-          <properties />
-          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/contacts/ContactViewTests.java</url>
@@ -1297,8 +1299,8 @@
         <state relative-caret-position="504">
           <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="e#2061#2062#0" expanded="true" />
-            <element signature="e#2083#2084#0" expanded="true" />
+            <element signature="e#2227#2228#0" expanded="true" />
+            <element signature="e#2249#2250#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1543,7 +1545,7 @@
         <state relative-caret-position="264">
           <caret line="29" column="33" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="29" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1566,65 +1568,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/model/GroupData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/groups.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/generators/GroupDataGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/generators/ContactDataGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/contacts.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/groups/GroupCreationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="103" lean-forward="false" selection-start-line="22" selection-start-column="103" selection-end-line="22" selection-end-column="103" />
-          <folding>
-            <element signature="e#629#639#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1636,37 +1584,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/model/ContactData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="238" column="21" lean-forward="false" selection-start-line="238" selection-start-column="21" selection-end-line="238" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/contacts/ContactViewTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        <state relative-caret-position="210">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/contacts/ContactCreationTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/appmanager/ContactHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="299">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/appmanager/ContactHelper.java">
+    <entry file="file://$PROJECT_DIR$/gradlew">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/groups.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/groups/GroupCreationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="31" column="46" lean-forward="false" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#743#753#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/model/GroupData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/model/ContactData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/generators/GroupDataGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-504">
+          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/contacts.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/generators/ContactDataGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="43" column="42" lean-forward="false" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/contacts.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/javacourse/addressbook/tests/contacts/ContactCreationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding>
+            <element signature="e#879#889#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
