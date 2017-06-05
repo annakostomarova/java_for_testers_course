@@ -13,7 +13,7 @@ public class ContactPostAddressTests extends TestBase {
   @BeforeMethod
   public void ensurePreconditions() {
     app.goTo().homePage();
-    if (app.contact().all().size() == 0) {
+    if (app.db().contacts().size() == 0) {
       app.contact().create(new ContactData()
               .withFirstName("Firstname")
               .withMiddleName("Middlename")
